@@ -31,6 +31,12 @@ dependencies = [
 [project.scripts]
 streamgate = "streamgate.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/prathamsk333/streamGate"
+Repository = "https://github.com/prathamsk333/streamGate"
+Issues = "https://github.com/prathamsk333/streamGate/issues"
+Changelog = "https://github.com/prathamsk333/streamGate/blob/main/CHANGELOG.md"
+
 [dependency-groups]
 dev = [
     "mypy>=1.11",

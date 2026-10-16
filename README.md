@@ -92,7 +92,7 @@ $ streamgate rules test rules/orders.yaml --file samples.jsonl
 Needs Docker.
 
 ```bash
-git clone <this repo> && cd streamgate
+git clone https://github.com/prathamsk333/streamGate.git && cd streamGate
 docker compose -f docker/compose.example.yml up -d --build
 ```
 
