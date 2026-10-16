@@ -1,0 +1,16 @@
+kafka:
+  bootstrap_servers: localhost:9092
+  group_id: streamgate
+
+streams:
+  - name: orders
+    rules: rules/orders.yaml
+
+pipeline:
+  batch_size: 500
+
+metrics:
+  port: 9108
+
+logging:
+  format: console

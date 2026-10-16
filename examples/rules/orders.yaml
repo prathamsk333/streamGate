@@ -1,0 +1,48 @@
+stream: orders
+version: 1
+rules:
+  - id: order_id.required
+    type: required
+    field: order_id
+
+  - id: customer_id.required
+    type: required
+    field: customer_id
+
+  - id: amount.type
+    type: type
+    field: amount
+    is: number
+
+  - id: amount.range
+    type: range
+    field: amount
+    min: 1
+    max: 10000
+
+  - id: currency.enum
+    type: enum
+    field: currency
+    values: [INR, USD, EUR]
+
+  - id: placed_at.fresh
+    type: freshness
+    field: placed_at
+    max_age: 5m
+
+  - id: dates.ordered
+    type: expression
+    expr: "shipped_at is None or ts(shipped_at) >= ts(placed_at)"
+    message: shipped_at is before placed_at
+
+  - id: notes.pii
+    type: pii
+    fields: [notes]
+    patterns: [email, phone]
+    action: mask
+    severity: warn
+
+  - id: order.dedup
+    type: dedup
+    key: order_id
+    window: 10m

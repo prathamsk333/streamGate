@@ -1,0 +1,6 @@
+{"order_id": 1, "customer_id": 88, "amount": 349, "currency": "INR", "placed_at": "2025-10-14T09:58:00Z"}
+{"order_id": 2, "customer_id": null, "amount": 34900, "currency": "INR", "placed_at": "2025-10-14T09:58:00Z"}
+{"order_id": 3, "customer_id": 12, "amount": 99, "currency": "INR", "placed_at": "2025-10-14T09:58:00Z", "notes": "call me on 98765 43210"}
+{"order_id": 1, "customer_id": 88, "amount": 349, "currency": "INR", "placed_at": "2025-10-14T09:58:30Z"}
+{"order_id": 4, "customer_id": 7, "amount": 10, "currency": "GBP", "placed_at": "2025-10-14T08:00:00Z"}
+not json at all
